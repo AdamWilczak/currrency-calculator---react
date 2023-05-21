@@ -1,25 +1,42 @@
 import "./style.css";
+import React, { useState } from "react";
+import { currencies } from "./currencies";
+import Result from "../Result";
 
-const Form = () => (
-  <form className="form">
+export const Form = ({ calculateResult, result }) => {
+  const [currency, setCurrency] = useState(currencies[0].short);
+  const [amount, setAmount] = useState("");
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    calculateResult(currency, amount);
+  };
+
+  <form className="form" onSubmit={onSubmit}>
     <fieldset>
       <legend className="form__legend">Currency Calculator</legend>
       <p>
         <label>
-          <span className="form__Label">Wybierz walutę:</span>
-          <select name="Currency" className="currency" autofocus>
-            <option value="EUR">EUR</option>
-            <option value="CHF">CHF</option>
-            <option value="USD">USD</option>
-            <option value="NOK">NOK</option>
+          <span className="form__Label">Choose currency:</span>
+          <select
+            value={currency}
+            onChange={({ target }) => setCurrency(target.value)}
+          >
+            {currencies.map((currency) => (
+              <option key={currency.short} value={currency.short}>
+                {currency.names}
+              </option>
+            ))}
           </select>
         </label>
       </p>
       <p>
         <label>
-          <span className="form__Label">Podaj wartość w PLN:</span>
+          <span className="form__Label">Enter value in PLN:</span>
           <input
             type="number"
+            value={amount}
+            onChange={({ target }) => setAmount(target.value)}
             min="1"
             max="1000000"
             step="0.01"
@@ -29,11 +46,11 @@ const Form = () => (
           />
         </label>
       </p>
-      <button className="form__button">Przelicz</button>
-      <p className="form__description">pola oznaczone * są wymagane.</p>
-      <p className="form__result"></p>
+      <button className="form__button">Recalculate</button>
+      <p className="form__description">Fields * are required</p>
+      <Result result={result} />
     </fieldset>
-  </form>
-);
+  </form>;
+};
 
-export default Form
+export default Form;
