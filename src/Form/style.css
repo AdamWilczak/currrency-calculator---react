@@ -19,15 +19,31 @@
   font-size: 15px;
   margin: 10px;
   width: 200px;
-  display: inline-block;
+  display: inline-flex;
 }
 
+.currency_name{
+  font-size: 15px;
+  padding: 2px;
+  
+
+  
+}
 .form__button {
   float: right;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form__button:hover{
+  background-color: rgb(150, 215, 235);
+  transition: 0.2s ease-in-out;
 }
 
 .form__description {
   text-transform: uppercase;
   font-size: x-small;
+  float: left;
 }
 
