@@ -1,5 +1,6 @@
 .form__result {
-  text-align: center;
+  display: inline-block;
   font-size: 18px;
   font-weight: 600;
+  padding-top: 30px;
 }

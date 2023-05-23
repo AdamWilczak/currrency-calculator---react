@@ -1,7 +1,21 @@
 # currency calculator - react app
 
+## [Demo link](https://adamwilczak.github.io/currrency-calculator---react/)
+
+![Alt text](public/Przechwytywanie.JPG)
+# Technologies used in the project:
+- HTML
+- CSS
+- JavaScript
+- React.js
+- Create React App
 
 
+
+## Description app:
+1. Select a currency.
+2. Click button.
+3. Cry because there is inflation.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
