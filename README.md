@@ -2,7 +2,7 @@
 
 ## [Demo link](https://adamwilczak.github.io/currrency-calculator---react/)
 
-![Alt text](public/Przechwytywanie.JPG)
+(![Alt text](public/ogImage.png))
 # Technologies used in the project:
 - HTML
 - CSS
