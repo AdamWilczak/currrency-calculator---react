@@ -2,6 +2,7 @@ import Form from "./Form";
 import currencies from "./Form/currencies";
 import { useState } from "react";
 
+
 function App() {
   const [result, setResult] = useState();
 
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div className="body__background">
-      <Form result={result} calculateResult={calculateResult} />
+            <Form result={result} calculateResult={calculateResult} />
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.dateStyle{
+  font-size: small;
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+  font-family: 'Courier New', Courier, monospace;
+}

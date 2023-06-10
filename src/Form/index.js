@@ -2,6 +2,7 @@ import "./style.css";
 import React, { useState } from "react";
 import  currencies  from "./currencies";
 import Result from "../Result";
+import DateComp from "../DateComponent";
 
 const Form = ({ calculateResult, result }) => {
   const [currency, setCurrency] = useState(currencies[0].short);
@@ -17,6 +18,7 @@ const Form = ({ calculateResult, result }) => {
       <fieldset>
         <legend className="form__legend">Currency Calculator</legend>
         <p>
+          <DateComp/>
           <label>
             <span className="form__Label">Choose currency:</span>
             <select className="currency_name"
